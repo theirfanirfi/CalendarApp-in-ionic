@@ -37,7 +37,7 @@ export class DisplayScreenPage {
          
           this.cal.listEventsInRange(start, end).then(data => {
             for(let d of data){
-              if(d.title == this.input1 || d.title == this.input2 || d.title == this.input3 || d.title == this.input4 || d.title == this.input5)
+              if(d.title.includes(this.input1) || d.title.includes(this.input2) || d.title.includes(this.input3) || d.title.includes(this.input4) || d.title.includes(this.input5))
               {
                 this.events.push(d);
               }
